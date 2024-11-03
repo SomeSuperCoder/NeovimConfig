@@ -15,7 +15,8 @@ return {
 					"ts_ls",
 					"pyright",
 					"rust_analyzer",
-					"volar"
+					"volar",
+					"gopls"
 				}
 			})
 		end
@@ -31,6 +32,7 @@ return {
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 			lspconfig.volar.setup({ capabilities = capabilities })
+			lspconfig.gopls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
